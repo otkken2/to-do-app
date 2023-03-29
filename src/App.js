@@ -44,12 +44,11 @@ function App() {
   console.log(todos);
   return (
     <div className="App h-screen w-screen tex-center flex flex-col">
-      <h1>TodoApp</h1>
+      <h1 className='font-bold my-5 mb-10'>TodoApp</h1>
       <form onSubmit={handleSubmit}>
-        <div className='flex mb-10 mx-auto  justify-center'>
-          <label className='w-14 self-center'>追加：</label>
-          <input value={inputText} type="text" onChange={(e)=> handleChangeInputText(e)} className='lg:w-1/2  p-5 border h-10 border-solid border-cyan-950 rounded-full'/>
-          <button type="submit"className='border border-solis w-22 rounded-full'>追加する</button>
+        <div className='flex flex-col mb-10 mx-auto text-center justify-center'>
+          <input value={inputText} placeholder='input todo...' type="text" onChange={(e)=> handleChangeInputText(e)} className='md:w-1/2 w-[98%] m-auto p-5 border text-center h-10 border-solid border-cyan-950 rounded-full'/>
+          <button type="submit"className='border border-solis mt-5 h-[40px]  w-[300px] m-auto bg-black text-white rounded-full'>追加する</button>
         </div>
         <p>やることリスト:</p>
         { todos.length ?
