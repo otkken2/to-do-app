@@ -36,6 +36,10 @@ function App() {
     setDoneList(prevDoneList => prevDoneList.filter(eachDone => eachDone !== el));
     setTodos(prevTodos => [...prevTodos,el]);
   }
+
+  const handleClickDoneDelete = (el) => {
+    setDoneList(prevDoneList => prevDoneList.filter(eachDone => eachDone !== el));
+  };
   console.log("todos");
   console.log(todos);
   return (
@@ -79,7 +83,7 @@ function App() {
                   <li className='flex justify-between'>
                     {eachDone}
                     <div className='flex'>
-                      <p className='rounded-full w-14 border-2 border-solid  ml-10' onClick={()=> handleClickDelete(eachDone)}>削除</p>
+                      <p className='rounded-full w-14 border-2 border-solid  ml-10' onClick={()=> handleClickDoneDelete(eachDone)}>削除</p>
                       <p className='rounded-full w-14 border-2 border-solid  ml-5' onClick={()=> handleClickReturn(eachDone)}>戻す</p>
                     </div>
                   </li>
