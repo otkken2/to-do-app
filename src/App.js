@@ -46,14 +46,14 @@ function App() {
     <div className="App h-screen w-screen tex-center flex flex-col">
       <h1>TodoApp</h1>
       <form onSubmit={handleSubmit}>
-        <div className='flex mb-10 mx-auto px-20 justify-center'>
+        <div className='flex mb-10 mx-auto  justify-center'>
           <label className='w-14 self-center'>追加：</label>
-          <input value={inputText} type="text" onChange={(e)=> handleChangeInputText(e)} className='w-1/2 p-5 border h-10 border-solid border-cyan-950 rounded-full'/>
+          <input value={inputText} type="text" onChange={(e)=> handleChangeInputText(e)} className='lg:w-1/2  p-5 border h-10 border-solid border-cyan-950 rounded-full'/>
           <button type="submit"className='border border-solis w-22 rounded-full'>追加する</button>
         </div>
         <p>やることリスト:</p>
         { todos.length ?
-          <div className='mx-auto w-1/2 mb-5'>
+          <div className='mx-auto sm:w-1/2 px-10 mb-5'>
             <ul>
               {
                 todos.map((eachTodo,index) => {
@@ -75,7 +75,7 @@ function App() {
         }
         <p>完了リスト:</p>
         { doneList.length ?
-        <div className='mx-auto w-1/2 mb-5'>
+        <div className='mx-auto sm:w-1/2 px-10 mb-5'>
           <ul>
             {
               doneList.map(eachDone => {
